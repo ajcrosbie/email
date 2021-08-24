@@ -8,7 +8,7 @@ def searchMail(username, password):
     mail = imaplib.IMAP4_SSL(host)
     mail.login(username, password)
     mail.select("inbox")
-
+    
     _, searchData = mail.search(None, "UNSEEN") # get unseen mesages
 
     for x in searchData[0].split():

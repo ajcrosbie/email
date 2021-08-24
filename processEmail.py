@@ -13,7 +13,7 @@ def check(recived, file, loginDetails):
             for v in s.split():#
                 if c[0] == v:
                     if not (c[1] in message):
-                        message.append(c[0] + ": "+ c[1])
+                        message.append(c[0] + " : "+ c[1])
                     
     if len(message) == 0:
         writeEmail.send_mail("I found nothing that help, sorry", "automatic response", loginDetails[2],
