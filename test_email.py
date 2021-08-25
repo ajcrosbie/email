@@ -27,7 +27,8 @@ def test_SendRead():
         if c == "stop":
             temp = False
         else:
-            v.append(i for i in c.split())
+            for i in c["body"].split():
+                v.append(i)
     assert "dog" in v # change to keyword from actual keywords file
 
 def test_process():
